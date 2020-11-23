@@ -46,3 +46,11 @@ second_digit = two_digit_number[1]
 
 print (int(first_digit) + int(second_digit))
 
+'''kolejnosc dzialan, tzw. PEMDAS:
+()
+**
+* /
++ -
+'''
+print(3 * 3 + 3 / 3 - 3) #wyik bedzie 7.0 (float)
+print(3 * (3 + 3 )/ 3 - 3) #wyik bedzie 3.0 (float)
