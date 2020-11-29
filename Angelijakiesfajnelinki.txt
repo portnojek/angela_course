@@ -1,0 +1,2 @@
+thonny - program do debugowania
+draw.io - elektroniczny flipchart
