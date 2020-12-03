@@ -5,3 +5,4 @@ print(random_integer)
 
 random_float = random.uniform(1, 5)
 print(random_float)
+
