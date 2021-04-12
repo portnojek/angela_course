@@ -283,7 +283,7 @@ word_list = [
 'zipper', 
 'zodiac', 
 'zombie', 
-]               
+'wroclaw']               
 
 print(logo)
 game_is_finished = False
