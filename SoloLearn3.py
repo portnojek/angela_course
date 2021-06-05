@@ -1,0 +1,13 @@
+#txt = input("Wpisz swoje dowolne zdanie: ")
+#longest = max(txt.split())
+#print(longest)
+
+txt = input("Wpisz swoje dowolne zdanie: ")
+lista = list(txt.split())
+lista2 = list(lista[0][::-1])
+lista3 = list(lista[0][-1::])
+lista4 = list(lista[0][::])
+print(lista)
+print(lista2)
+print(lista3)
+print(lista4)
