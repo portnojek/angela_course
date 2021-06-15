@@ -27,3 +27,5 @@ while not bidding_finished:
         find_highest_bidder(bids)
     elif should_continue == "yes":
         clear()
+
+print(365%4)
