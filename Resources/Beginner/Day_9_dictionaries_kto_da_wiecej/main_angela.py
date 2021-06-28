@@ -28,4 +28,4 @@ while not bidding_finished:
     elif should_continue == "yes":
         clear()
 
-print(365%4)
+

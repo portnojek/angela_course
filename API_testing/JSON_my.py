@@ -13,7 +13,7 @@ film = {
             }
 }
 
-encodedFilm = json.dumps(film, ensure_ascii=False)
+encodedFilm = json.dumps(film, ensure_ascii=False, indent=4, sort_keys=True)
 print(encodedFilm)
 
 with open("sample2.json", "w", encoding="UTF-8") as file:
