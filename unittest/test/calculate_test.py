@@ -1,5 +1,8 @@
+#nosetests --rednose --cov calculate_python.py
+#nosetests --with-coverage calculate_test.py
+
 import unittest
-from unit.app.calculate import Calculate
+from calculate import Calculate
 
 class TestCalclate(unittest.TestCase):
     def setUp(self):
