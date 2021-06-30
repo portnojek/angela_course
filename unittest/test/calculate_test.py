@@ -2,7 +2,7 @@
 #nosetests --with-coverage calculate_test.py
 
 import unittest
-from calculate import Calculate
+from unit.app.calculate import Calculate
 
 class TestCalclate(unittest.TestCase):
     def setUp(self):
