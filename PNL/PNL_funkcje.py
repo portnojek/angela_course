@@ -196,3 +196,22 @@ for x in range (10):
     czekacz()
 koniec = datetime.now()
 print(koniec-poczatek)
+
+from datetime import datetime
+import time
+import functools
+
+'''dekorator cache Dekorator ten sprawia że wynik działania naszej funkcji czekacz ląduje w cache i jest pobierana przy 
+kolejnych wywołaniach tej funkcji dla tych samych argumentów (w naszym przypadku brak argumentu - funkcja zawsze zwraca 1).
+Cache można stosować tylko do funkcji deterministycznych - czyli w skrócie takich które dla tych
+samych parametrów wejściowych zwrócą nam zawsze te same dane wyjściowe.'''
+
+@functools.lru_cache(maxsize=None) #maxsize = None określa dla ilu wartości wejściowych funkcja ma przechowywać dane w cache.
+def czekacz():
+    time.sleep(1)
+    return 1
+poczatek=datetime.now()
+for x in range(10):
+    czekacz()
+koniec=datetime.now()
+print(koniec-poczatek)

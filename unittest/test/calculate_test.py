@@ -1,4 +1,4 @@
-#nosetests --rednose --cov calculate_python.py
+#nosetests --rednose --cov calculate_test.py
 #nosetests --with-coverage calculate_test.py
 
 import unittest
