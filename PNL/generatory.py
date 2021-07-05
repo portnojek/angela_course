@@ -70,6 +70,7 @@ def rozbijacz_csv(np,r):
             break
             yield linia.strip().split(r)
 
-rc=rozbijacz_csv('plik.csv',';')
-print(next(rc))
-print(next(rc))
+# rc=rozbijacz_csv('plik.csv',';')
+# print(next(rc))
+# print(next(rc))
+
