@@ -42,3 +42,65 @@ def doopakowania():
 def dekorator(fun):
     def opakowujaca():
         print('opakowujaca')
+        fun()
+    return opakowujaca
+
+#kolejny dekorator
+def dekorator(fun):
+    def wewnetrzna():
+        print('jakieś dodatkowe działania')
+        fun()
+    return wewnetrzna
+
+@dekorator
+def funkcja():
+    print('jestem funkcją')
+
+funkcja()
+
+#Dekorowanie funkcji z parametrami
+def dekorowana(x):
+    print(f'siema {x}')
+
+def dekorator(fun):
+    def wewn(x):
+        print('przed')
+        fun(x)
+        print('po')
+    return wewn
+
+d=dekorator(dekorowana)
+d('Andrzej')
+
+#Dekorator może przyjmować argumentu również jako *args lub **kwargs
+
+def funkcja(imie):
+    print(f"Hello {imie}!")
+
+def dekorator(fun, *args):
+    def wewn():
+        print('dekoracja')
+        fun(*args)
+    return wewn
+
+f=dekorator(funkcja, 'Andrzej')
+f()
+
+#Alternatywny sposób tworzenia dekoratora:
+
+def dekorator(fun, *args):
+    def wewn(*args):
+        print('dekoracja')
+        fun(*args)
+    return wewn
+
+@dekorator
+def funkcja(imie):
+    print(f"hello {imie}!")
+
+def zdokomuentacja():
+    """to jest dokumentacja tej funkcji"""
+    pass
+
+help(zdokomuentacja)
+print(zdokomuentacja.__doc__)
