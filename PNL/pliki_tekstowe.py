@@ -75,7 +75,7 @@ linie = plik.readlines()
 print(linie)
 plik.close()
 
-#lub, żeby było łatniej
+#lub, żeby było łatwiej
 plik = open('/home/bartek/Dokumenty/pythonowe_pliczki/dane.txt', encoding='utf-8')
 linie = plik.read().splitlines()
 print(linie)
