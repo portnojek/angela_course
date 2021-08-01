@@ -24,7 +24,7 @@ def button_add():
 	math = "addition"
 	f_num = int(first_number)
 	e.delete(0, END)
-
+	#e.delete(0, END)
 def button_equal():
 	second_number = e.get()
 	e.delete(0, END)
