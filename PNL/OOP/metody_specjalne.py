@@ -46,3 +46,67 @@ class Samochod:
         
 s = Samochod("Renault","Kadjar")
 print(s.marka,s.model)
+
+#__str__
+'''jej zadaniem jest zwracanie obiektu w postaci tekstowej'''
+
+class Samochod:
+    marka=None
+    model=None
+    def __str__(self):
+        return "marka={} model={}".format(self.marka,self.model)
+
+s=Samochod()
+print(s)
+
+
+#__add__ i przeciążanie operatorów
+
+class Samochod:
+    marka=None
+    model=None
+    def __add__(self, other):
+        return "Kraksa 2 Sebastianów w dresie. Jeden jechał {}, drugi {}".format(self, other)
+    def __init__(self, marka, model):
+        self.marka=marka
+        self.model=model
+    def __str__(self):
+        return "marka={} model={}".format(self.marka,self.model)
+
+s=Samochod("Audi","A4")
+print(s)
+s2=Samochod("Bmw","e46")
+s3=s+s2
+print(s3)
+
+#__getitem__ i __setitem__
+'''Funkcje __getitem__ i __setitem__ umożliwiają stworzenie własnego tworu zbliżonego do list czy
+słownika.'''
+
+class MyDictionary:
+    dict=dict()
+    def add_element(self,key,value):
+        self.dict[key]=value
+    def get_element(self,key):
+        return self.dict[key]
+
+md=MyDictionary()
+md.add_element('A',1000)
+print(md.get_element('A'))
+
+
+class MyDictionary:
+    dict=dict()
+    def __setitem__(self,key,value):
+        self.dict[key]=value
+    def __getitem__(self,key):
+        return self.dict[key]
+
+md=MyDictionary()
+md['klucz']='wartość'
+print(md['klucz'])
+'''Teraz możemy naszą klasę wzbogacić o elementy których w tradycyjnych słownikach nie ma'''
+
+
+
+
